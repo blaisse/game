@@ -27,7 +27,9 @@ import SocketProvider from './SocketProvider';
 class App extends Component {
     constructor(props){
         super(props);
-        this.socket = io('http://localhost:5002');
+        // this.socket = io('http://localhost:5002');
+        this.socket = io('https://text--game.herokuapp.com/');
+        // this.socket = io('https://textgame.azurewebsites.net');
         this.user = localStorage.getItem('username');
         this.handleMenuClick = this.handleMenuClick.bind(this);
         this.openMenu = this.openMenu.bind(this);
