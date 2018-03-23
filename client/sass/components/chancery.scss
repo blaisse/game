@@ -1,0 +1,29 @@
+.chancery {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    &__header {
+        margin-bottom: 1rem;
+    }
+    &__build-item {
+        padding: 1rem;
+        background-color: lemonchiffon;
+        margin-bottom: 0.5rem;
+        margin-right: 1rem;
+        border: 1px solid rgb(190, 190, 190);
+        animation: slide-up .3s ease;
+        &-cost {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+        &:hover {
+            background-color: rgb(252, 255, 215)
+        }
+    }
+}

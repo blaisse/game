@@ -1,0 +1,32 @@
+.auth {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    button {
+        width: 100%;
+        border: 1px solid rgb(231, 231, 231);
+        background-color: #fff;
+        border-radius: 0;
+        margin-top: 1rem;
+        padding: 10px 0 10px 0;
+    }
+    &__form {
+        // align-items: center;
+        // justify-content: center;
+        &__row {
+            padding: 0.5rem;
+            input {
+                padding: 10px;
+                border: 1px solid rgb(231, 231, 231);
+                outline: none;
+                display: flex;
+            }
+
+            &__error {
+                color: rgb(255, 151, 151);
+                text-align: center;
+                margin-top: 1rem;
+            }
+        }
+    } 
+}
