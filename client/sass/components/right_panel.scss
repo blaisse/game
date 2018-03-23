@@ -1,0 +1,70 @@
+.right-panel {
+    // position: absolute;
+    // right: 0;
+    // top: 6vh;
+    width: 10vw;
+    // float: right;
+    // height: 94vh;
+    // background-color: $left-panel-bg-color;
+    background-color: $panel-bg-color; 
+    // background-color: rgb(255, 184, 118);
+    font-size: $font-size;
+    border-left: 1px solid $panel-border-color;
+
+    @include respond(phone){
+        border: none;
+        width: 100%;
+        height: 10rem;
+    }
+
+    &-events {
+        // color: #A1CDF4;
+        color: rgb(78, 78, 78);
+        text-align: center;
+        padding: 5px 0 5px 0;
+        background-color: $bg;
+        border-bottom: 1px solid $panel-border-color;
+        animation: slide-up .4s ease;
+    }
+    &-queue {
+        text-align:center;
+        margin-top: 10rem;
+    }
+}
+
+.timer {
+    color: rgb(78, 78, 78);
+    // transition: all .4s ease-out;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    animation: slide-up 0.4s ease;
+    background-color: $bg;
+    border-top: 1px solid $panel-border-color;
+    border-bottom: 1px solid $panel-border-color;
+    margin-bottom: 1rem;
+
+    &__remove {
+        color: pink;
+    } 
+} 
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes slide-top {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
