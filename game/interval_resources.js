@@ -3,7 +3,7 @@ const User = mongoose.model('users');
 
 module.exports = (io) => {
 
-setTimeout(async () => {
+setInterval(async () => {
     //fetch all users - for each:
     //get currect income per hour
     const users = await User.find();

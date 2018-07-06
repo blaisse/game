@@ -15,17 +15,15 @@ const utils = require('./game/utils');
 const Game = require('./game/Game');
 const game = new Game();
 
-
 const resource_buildings = require('./game/buildings/resource_buildings');
 const administration = require('./game/buildings/administration_buildings');
 
 mongoose.connect(keys.mongoURI);
 require('./models/User');
 
-
 const User = mongoose.model('users');
 const Map = mongoose.model('maps');
-// game.map.generateMap(4, 'first');
+game.map.generateMap(4, 'first');
 const app = express();
 app.use(bodyParser.json());
 const server = http.createServer(app);
@@ -66,7 +64,6 @@ setInterval(() => {
                     // if(Object.keys(usersQueue[first.user].length === 0)){
                     if(Object.keys(usersQueue[first.user]).length === 0){
                         // console.log('length?', Object.keys(usersQueue[first.user].length));
-                        // console.log('wrd zero',usersQueue[first.user], usersQueue[first.user].length);
                         delete usersQueue[first.user];
                     }
                 }
