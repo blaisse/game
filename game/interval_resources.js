@@ -8,8 +8,6 @@ setTimeout(async () => {
     //get currect income per hour
     const users = await User.find();
     users.forEach((user) => {
-        // console.log('income:', user.income);
-        // console.log('?', user);
         let upkeep = {};
         if(user.units.length !== 0){
             // console.log('army upkeep', user.calculateArmyUpkeep());
@@ -22,14 +20,10 @@ setTimeout(async () => {
             let income = user.resources[resource];
             // console.log('balance', income);
             income += user.income[resource];
-            // console.log('income+income?',resource, income);
-            // console.log('?WE?QWE',resource, income);
             //add income to resource
             if(upkeep[resource]){
                 income -= upkeep[resource];
             }
-            // console.log('rr', resource, upkeep[resource]);
-            // console.log('upkeep', income);
             if(buildingsIncome[resource]){
                 income += buildingsIncome[resource];
             }
@@ -41,6 +35,6 @@ setTimeout(async () => {
             io.to(user.username).emit('updateResources');
         });
     });
-}, 2000);
+}, 10000);
 
 }

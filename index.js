@@ -31,7 +31,7 @@ app.use(bodyParser.json());
 const server = http.createServer(app);
 let io = socketIO(server);
 
-// require('./game/interval_resources')(io); 
+require('./game/interval_resources')(io); 
 
 //sort queue by time when should be completed
 let queue = [];
