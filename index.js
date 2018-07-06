@@ -23,7 +23,7 @@ require('./models/User');
 
 const User = mongoose.model('users');
 const Map = mongoose.model('maps');
-game.map.generateMap(4, 'first');
+// game.map.generateMap(4, 'first');
 const app = express();
 app.use(bodyParser.json());
 const server = http.createServer(app);
